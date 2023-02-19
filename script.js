@@ -20,7 +20,7 @@ const users = [
   
   // Check if user is logged in on page load
   const loggedInUser = sessionStorage.getItem('loggedInUser');
-  if (!loggedInUser && window.location.pathname !== '/page1.html') {
+  if (!loggedInUser && window.location.pathname !== '/index.html') {
     login();
   }
   
