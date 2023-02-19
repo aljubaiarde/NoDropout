@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World Website</title>
+</head>
+<body>
+	<h1>Welcome to page 1</h1>
+	<form id="loginForm">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username"><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="button" value="Login" onclick="checkLogin()">
+	</form>
+	<div id="links" style="display:none">
+		<a href="page2.html">Link to page 2</a><br>
+		<a href="page3.html">Link to page 3</a>
+	</div>
+	<script>
+		function checkLogin() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			// validate the username and password
+			if (username === "username" && password === "password") {
+				// set the authenticated flag in session storage
+				sessionStorage.setItem("authenticated", "true");
+				document.getElementById("loginForm").style.display = "none";
+				document.getElementById("links").style.display = "block";
+			} else {
+				alert("Invalid username or password");
+			}
+		}
+	</script>
+</body>
+</html>
