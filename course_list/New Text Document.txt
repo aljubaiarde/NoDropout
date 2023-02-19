@@ -1,0 +1,42 @@
+From not enrolled to enroll
+
+By default all courses should be not enrolled
+To enroll, change all div on the course name from notenrolled to enroll
+Change button text from Not Enrolled to Contiune
+
+<!-- Technical Fundamentals -->
+<div class="notenrolled-container">
+	<div class="notenrolled">
+		<div class="notenrolled-preview">
+			<h6>Course</h6>
+			<h2>Technical Fundamentals</h2>
+		</div>
+		<div class="notenrolled-info">
+			<h6>Chapter 4</h6>
+			<br>
+			<h>&#x2705;Callbacks & Closures</h>
+			<button class="btn">Not Enrolled</button>
+		</div>
+	</div>
+</div>
+
+
+
+Change it to 
+
+
+<!-- Technical Fundamentals -->
+<div class="enrolled-container">
+	<div class="enrolled">
+		<div class="enrolled-preview">
+			<h6>Course</h6>
+			<h2>Technical Fundamentals</h2>
+		</div>
+		<div class="enrolled-info">
+			<h6>Chapter 4</h6>
+			<br>
+			<h>&#x2705;Callbacks & Closures</h>
+			<button class="btn">Continue</button>
+		</div>
+	</div>
+</div>
