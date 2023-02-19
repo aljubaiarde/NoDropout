@@ -1,6 +1,4 @@
-  if (!navigator.userAgent.includes("ArtisBrowser")) {
-    window.location.replace("https://www.keycdn.com/support/403-forbidden");
-  }
+
 
   // Your whitelist of allowed IP addresses - ADIM + ALL USERS
   var whitelist = ["87.149.156.70", "192.168.1.101", "192.168.1.102"];
