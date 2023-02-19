@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>NoDropout - Linear Algebra & Graph Theory</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat''><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+	<script>
+
+		// check if the user is authenticated
+		if (sessionStorage.getItem("authenticated") !== "true") {
+			// if not, redirect to index.html
+			window.location.replace("https://aljubaiarde.github.io/NoDropout/");
+		}
+		
+		if (!navigator.userAgent.includes("ArtisBrowser")) {
+			window.location.replace("https://www.keycdn.com/support/403-forbidden");
+		}
+
+		// Your whitelist of allowed IP addresses ADMIN + ALL ENTROLLED USER
+		var whitelist = ["87.149.156.70", "192.168.1.101", "192.168.1.102"];
+
+		// Get the user's IP address
+		fetch("https://api.ipify.org?format=json")
+		.then(response => response.json())
+		.then(data => {
+			// Check if the user's IP address is in the whitelist
+			if (!whitelist.includes(data.ip)) {
+			// If the IP address is not in the whitelist, block access
+			window.location.replace("https://httpstatusdogs.com/403-forbidden");
+			}
+		});
+
+		// disable right click
+		document.addEventListener("contextmenu", function(event) {
+			event.preventDefault();
+		});
+  
+	</script>
+
+
+<!-- partial:index.partial.html -->
+<h2>NLinear Algebra & Graph Theory</h2>
+<ul class="accordion-menu">
+  <li>
+    <div class="dropdownlink"><i class="fa fa-play" aria-hidden="true"></i> Videos
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-file" aria-hidden="true"></i> Files
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+      <li><a href="#">1. Fundamentals of Logistics </a></li>
+      <li><a href="#">2. Production Logistics and others</a></li>
+      <li><a href="#">History book 3</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-rocket" aria-hidden="true"></i> Exam Preparation
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">Fantasy book 1</a></li>
+      <li><a href="#">Fantasy book 2</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="dropdownlink"><i class="fa fa-plus" aria-hidden="true"></i> Additional Materials
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+    <ul class="submenuItems">
+      <li><a href="#">Action book 1</a></li>
+      <li><a href="#">Action book 2</a></li>
+    </ul>
+  </li>
+</ul>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
