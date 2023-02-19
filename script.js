@@ -52,7 +52,7 @@
     // define the list of predefined users with their authentication details
     var users = [
       { username: "BlastoiseBattler", password: "ShellSmash33", ip: "87.149.156.70" },
-      { username: "BulbasaurBandit", password: "VineWhip99", ip: "84.25.35.33" },
+      { username: "BulbasaurBandit", password: "VineWhip99", ip: ["87.149.156.70", "65.32.56.00"] },
       { username: "CharizardChamp", password: "FlameThrower88", ip: "84.25.35.33" },
       { username: "DragoniteDynamo", password: "WingAttack88", ip: "87.149.156.70" },
       { username: "EeveeExplorer", password: "Evolution22", ip: "84.25.35.33" },
