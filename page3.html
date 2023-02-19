@@ -1,0 +1,23 @@
+<!-- page3.html (protected page) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page 3</title>
+</head>
+<body>
+  <h1>Welcome to Page 3</h1>
+  <p>This is a protected page. You must be logged in to view it.</p>
+  <button onclick="logout()">Log out</button>
+
+  <script>
+    function logout() {
+      sessionStorage.removeItem("loggedIn");
+      window.location.href = "index.html";
+    }
+
+    if (!sessionStorage.getItem("loggedIn")) {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

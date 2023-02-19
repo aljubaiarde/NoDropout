@@ -1,0 +1,37 @@
+<!-- index.html (landing page) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World Website</title>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>Welcome to my website. Please log in to access the other pages.</p>
+  <form onsubmit="return login()">
+    <label>Username:</label>
+    <input type="text" id="username" required><br>
+    <label>Password:</label>
+    <input type="password" id="password" required><br>
+    <button type="submit">Log in</button>
+  </form>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var users = {
+        "user1": "password1",
+        "user2": "password2",
+        "user3": "password3"
+      };
+      if (users.hasOwnProperty(username) && users[username] === password) {
+        sessionStorage.setItem("loggedIn", "true");
+        window.location.href = "page2.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
